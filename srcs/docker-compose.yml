@@ -12,7 +12,7 @@ volumes:
     name: mariadb
     driver: local
     driver_opts:
-      device: /home/fnikzad/Inception_42/srcs/wordpress
+      device: /home/fnikzad/Inception_42/srcs/mariadb
       o: bind
       type: none
 
