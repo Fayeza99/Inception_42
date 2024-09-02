@@ -16,7 +16,7 @@ echo "Downloading WordPress..."
 wp core download --allow-root || { echo "Failed to download WordPress"; exit 1; }
 
 echo "Creating WordPress configuration..."
-wp config create --force \
+wp config create --allow-root --force \
 				--url="${WP_URL}" \
 				--dbname="${DB_NAME}" \
 				--dbuser="${DB_USER}" \
@@ -25,7 +25,7 @@ wp config create --force \
 				--force || { echo "Failed to create configuration"; exit 1; }
 
 echo "Installing WordPress..."
-wp core install --url="${WP_URL}" \
+wp core install --allow-root --url="${WP_URL}" \
 				--title="${WP_TITLE}" \
 				--admin_user="${WP_ADMIN_NAME}" \
 				--admin_password="${WP_ADMIN_PASS}" \
@@ -33,7 +33,7 @@ wp core install --url="${WP_URL}" \
 				--skip-email || { echo "Failed to install WordPress"; exit 1; }
 
 echo "Creating additional WordPress user..."
-wp user create "${WP_USER_NAME}" \
+wp user create --allow-root "${WP_USER_NAME}" \
 				"${WP_USER_EMAIL}" \
 				--user_pass="${WP_USER_PASS}"
 
