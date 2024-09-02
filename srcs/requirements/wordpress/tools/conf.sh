@@ -1,4 +1,4 @@
-
+#!/bin/bash
 WP_DIR="/var/www/html"
 
 if [[ -z "$WP_URL" || -z "$DB_NAME" || -z "$DB_USER" || -z "$DB_PASSWORD" || -z "$WP_TITLE" || -z "$WP_ADMIN_NAME" || -z "$WP_ADMIN_PASS" || -z "$WP_ADMIN_EMAIL" || -z "$WP_USER_NAME" || -z "$WP_USER_EMAIL" || -z "$WP_USER_PASS" ]]; then
